@@ -14,6 +14,10 @@ body.addEventListener('click', () => {
 
 itens.forEach(item => {
     item.addEventListener('mouseover', (e) => {
+        if (e.target.classList.contains('selected')) {
+            return
+        }
+
         audio.pause()
         audio.currentTime = 0
 

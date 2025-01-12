@@ -9,7 +9,9 @@ const audio = new Audio('sounds/menu.mp3')
 const bgMusic = new Audio('sounds/color-your-night.mp3')
 
 body.addEventListener('click', () => {
-    bgMusic.play()
+    video.play()
+
+    setTimeout(() => bgMusic.play(), 500)
 }, { once: true })
 
 itens.forEach(item => {

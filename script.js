@@ -4,15 +4,22 @@ const moneyBox = document.querySelector('.money-box')
 const videoWrapper = document.querySelector('.video-wrapper')
 const video = document.querySelector('#video')
 const itens = menuWrapper.querySelectorAll('li')
+const welcomeWrapper = document.querySelector('.welcome-wrapper')
 
 const audio = new Audio('sounds/menu.mp3')
 const bgMusic = new Audio('sounds/color-your-night.mp3')
 
+bgMusic.volume = 0.4
+
 body.addEventListener('click', () => {
     video.play()
 
+    welcomeWrapper.classList.add('ok')
+
     setTimeout(() => bgMusic.play(), 500)
 }, { once: true })
+
+bgMusic.addEventListener('ended', () => bgMusic.play())
 
 itens.forEach(item => {
     item.addEventListener('mouseover', (e) => {

@@ -131,7 +131,7 @@ video.addEventListener('timeupdate', () => {
 })
 
 video.addEventListener('ended', () => {
-    videoWrapper.innerHTML = '<video autoplay muted loop id="video"><source src="videos/menu-2.mp4" type="video/mp4"></video>';
+    videoWrapper.innerHTML = '<video autoplay muted loop id="video"><source src="videos/bg-video-2.mp4" type="video/mp4"></video>';
 })
 
 insertListItens()

@@ -96,8 +96,9 @@ main.show {
     z-index: 1;
     aspect-ratio: 1 / cos(30deg);
     clip-path: polygon(100% 0, 120% 100%, 0 100%);
+    transform: skewX(-30deg);
+    animation: pulse 0.8s ease-in 0.2s reverse infinite;
     mix-blend-mode: lighten;
-    animation: insert 0.2s linear forwards, pulse 0.8s cubic-bezier(0.45, -0.3, 0.55, 1.35) 0.2s alternate infinite;
 }
 
 .selected::after {
@@ -108,11 +109,10 @@ main.show {
     width: 110%;
     height: 100px;
     background-color: #fff;
-    transform: skewX(-30deg);
     z-index: -1;
     aspect-ratio: 1 / cos(30deg);
     clip-path: polygon(120% 0, 100% 100%, 0 100%);
-    animation: insert 0.2s linear forwards;
+    transform: skewX(-30deg);
 }
 
 .menu li:not(.selected) {
@@ -216,15 +216,5 @@ main.show {
 
     to {
         transform: skewX(-30deg) rotate(1.3deg) scale(1.05);
-    }
-}
-
-@keyframes insert {
-    from {
-        transform: translateX(60px) skewX(-30deg);
-    }
-
-    to {
-        transform: translateX(0) skewX(-30deg);
     }
 }
